@@ -10,7 +10,7 @@ public class Transaction : Entity
 
     public DateTime Date { get; set; }
 
-    public string TypeOfTransacation { get; set; }
+    public string TypeOfTransaction { get; set; }
 
     public string Sender { get; set; }
 
