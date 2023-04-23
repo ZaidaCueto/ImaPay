@@ -4,12 +4,10 @@ import styles from "./style.module.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 interface FormData {
   id: number;
   valor: number;
@@ -23,7 +21,7 @@ const Transfer = ({ isOpen, onClose }: ModalProps) => {
     handleSubmit,
     reset,
     formState,
-    formState: { errors , isSubmitSuccessful },
+    formState: { errors, isSubmitSuccessful },
   } = useForm<FormData>();
 
   const showToastMessage = () => {
@@ -40,26 +38,26 @@ const Transfer = ({ isOpen, onClose }: ModalProps) => {
     data.type = "Transferência";
     // alert(JSON.stringify(data));
     //showToastMessage();
-    axios.post('/api/my-endpoint', JSON.stringify(data))
-    .then((response) =>{
-      console.log(response.data);
-    })
-    .catch((error) =>{
-      console.error(error);
-    });
+    axios
+      .post("/api/my-endpoint", JSON.stringify(data))
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   React.useEffect(() => {
-    if( formState.isSubmitSuccessful) {
-        reset({
-            id: 0,
-            valor: 0,
-            type:"",
-            message:""
-    });
-
+    if (formState.isSubmitSuccessful) {
+      reset({
+        id: 0,
+        valor: 0,
+        type: "",
+        message: "",
+      });
     }
-    },[formState, reset])
+  }, [formState, reset]);
 
   if (!isOpen) return null;
   return (
@@ -123,7 +121,5 @@ const Transfer = ({ isOpen, onClose }: ModalProps) => {
       </div>
     </div>
   );
-  
 };
-
 export default Transfer;
