@@ -1,3 +1,4 @@
+using ImaPay_BackEnd.Domain.Dtos;
 using ImaPay_BackEnd.Domain.Model;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,6 @@ namespace ImaPay_BackEnd.Repositories
     {
     public List<Transaction> GetAllAccounts();
 
-    public List<Transaction> GetByAccountNumber(int accountNumber);
+    public List<TransactionDto> GetByAccountNumber(int accountNumber);
     }
 }

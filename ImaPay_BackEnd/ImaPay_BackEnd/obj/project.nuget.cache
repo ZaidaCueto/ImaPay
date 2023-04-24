@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FqMW0tPhCWgZvCPm+S1gCmkIlHHt9OhOfvgnaVLCIYXkhcuANkVaOlYytvePv/6GtcU9nUcwnXewo3kukPJPdA==",
+  "dgSpecHash": "/iTogTxeyJIf3qUlGw4qCdX2/Psj8zzbVeTJWG+WTT2FH+UeK+nzo4p98p4A5eFMjoV9QvmS7Hai0Aonxg6bXg==",
   "success": true,
-  "projectFilePath": "C:\\ws-CSharp\\ImaPay\\ImaPay\\ImaPay_BackEnd\\ImaPay_BackEnd\\ImaPay_BackEnd.csproj",
+  "projectFilePath": "C:\\ws-workspace\\WebAPIs_studies\\ImaPay\\ImaPay\\ImaPay_BackEnd\\ImaPay_BackEnd\\ImaPay_BackEnd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\felip\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\felip\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

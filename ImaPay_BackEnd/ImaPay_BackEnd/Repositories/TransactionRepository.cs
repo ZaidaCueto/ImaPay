@@ -29,14 +29,9 @@ namespace ImaPay_BackEnd.Repositories
 
         public List<TransactionDto> GetByAccountNumber(int accountNumber)
         {
-           var transactions = _bank.Transactions.Where(t => t.AccountId == accountNumber).ToList();
-           var transactionsDto = transactions.Select(a => _mapp.Map<TransactionDto>(a)).ToList();
-           return transactionsDto;
-        }
-
-        List<Transaction> ITransactionRepository.GetByAccountNumber(int accountNumber)
-        {
-            throw new NotImplementedException();
+            var transactions = _bank.Transactions.Where(t => t.AccountId == accountNumber).ToList();
+            var transactionsDto = transactions.Select(a => _mapp.Map<TransactionDto>(a)).ToList();
+            return transactionsDto;
         }
     }
 }
