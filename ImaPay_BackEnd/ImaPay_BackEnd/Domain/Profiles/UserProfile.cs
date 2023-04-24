@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Transactions;
+using AutoMapper;
 using ImaPay_BackEnd.Domain.Dtos;
 using ImaPay_BackEnd.Domain.Model;
 
@@ -10,6 +11,8 @@ namespace ImaPay_BackEnd.Domain.Profiles
         {
             CreateMap<LoginDto, User>();
             CreateMap<User, LoginDto>();
+            CreateMap<Model.Transaction, TransactionDto>();
+            CreateMap<TransactionDto, Model.Transaction>();
 
         }
     }
